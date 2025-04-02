@@ -1,23 +1,20 @@
-import QuranBoxedLeft from "../components/fragments/QuranBoxedLeft";
-import SurahHeader from "../components/fragments/SurahHeader";
+import { ReactNode } from "react";
+import HeaderQuran from "../components/fragments/Header";
 
-const LayoutQuran = () => {
+interface LayoutQuranProps {
+  children: ReactNode;
+}
+
+const LayoutQuran = ({ children }: LayoutQuranProps) => {
   return (
-    <section className="grid grid-flow-col grid-cols-1 lg:grid-cols-4 gap-4 p-8 bg-[#F8FFF6]">
-      <div className="col-span-1">
-        <QuranBoxedLeft />
+    <>
+      <HeaderQuran />
+
+      {/* Desktop layout */}
+      <div className="hidden lg:block bg-[#F8FFF6] min-h-screen">
+        <section className="p-8 grid grid-cols-4 gap-6">{children}</section>
       </div>
-      <div className="col-span-3">
-        <SurahHeader
-          latinName="Al-fatihah"
-          arabicName="الفاتحة"
-          description="Pembukaan"
-          ayatCount={7}
-          revelationPlace="Mekah"
-          progress={20}
-        />
-      </div>
-    </section>
+    </>
   );
 };
 

@@ -6,7 +6,7 @@ type SurahHeaderProps = {
   description: string;
   ayatCount: number;
   revelationPlace: string;
-  progress?: number; 
+  progress?: number;
 };
 
 const SurahHeader = ({
@@ -18,7 +18,7 @@ const SurahHeader = ({
   progress = 20, // Default progress value
 }: SurahHeaderProps) => {
   return (
-    <div className="w-full bg-white rounded-2xl shadow-md p-6">
+    <div className="w-full h-40 bg-white rounded-2xl shadow-md p-6 flex flex-col">
       <div className="flex justify-between items-center mb-4">
         <div>
           <h1 className="text-2xl text-gray-500 font-medium">

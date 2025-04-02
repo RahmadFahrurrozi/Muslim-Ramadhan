@@ -1,11 +1,10 @@
-import LayoutQuran from "./layout/LayoutQuran";
+import HomeQuranPage from "./pages/Home";
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <LayoutQuran />
-    </div>
+    <main>
+      <HomeQuranPage />
+    </main>
   );
-}
-
+};
 export default App;
